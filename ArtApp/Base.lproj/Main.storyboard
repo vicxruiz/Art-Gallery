@@ -10,10 +10,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Lambda Gallery-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ArtApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="PaintingViewController" customModule="ArtApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,6 +21,44 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Vm-EW-Xz4">
                                 <rect key="frame" x="20" y="88" width="374" height="774"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="298" id="Tso-fy-1sg" customClass="PaintingTableViewCell" customModule="ArtApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="374" height="298"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Tso-fy-1sg" id="18P-0O-FL3">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="297.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="s0i-Bq-U54">
+                                                    <rect key="frame" x="40" y="-33" width="294" height="320"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lAf-LD-N52">
+                                                            <rect key="frame" x="27" y="0.0" width="240" height="256"/>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sos-RG-AvU">
+                                                            <rect key="frame" x="132" y="276" width="30" height="44"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <state key="normal" title="Like"/>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="lAf-LD-N52" firstAttribute="leading" secondItem="s0i-Bq-U54" secondAttribute="leading" constant="27" id="hcf-7q-HU5"/>
+                                                    </constraints>
+                                                </stackView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="s0i-Bq-U54" secondAttribute="trailing" constant="20" id="Dat-UQ-Afo"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="s0i-Bq-U54" secondAttribute="bottom" id="Qa4-q6-NN5"/>
+                                                <constraint firstItem="s0i-Bq-U54" firstAttribute="top" secondItem="18P-0O-FL3" secondAttribute="topMargin" constant="-44" id="oJm-wB-UbM"/>
+                                                <constraint firstItem="s0i-Bq-U54" firstAttribute="leading" secondItem="18P-0O-FL3" secondAttribute="leadingMargin" constant="20" id="xZ7-qH-W00"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="likeButton" destination="sos-RG-AvU" id="Wwd-Ff-zcf"/>
+                                            <outlet property="portraitImage" destination="lAf-LD-N52" id="qiZ-3J-GX1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -32,7 +70,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="DZY-oi-DRk"/>
+                    <navigationItem key="navigationItem" title="Lambda Gallery" id="DZY-oi-DRk"/>
+                    <connections>
+                        <outlet property="tableView" destination="1Vm-EW-Xz4" id="RzV-8I-4FK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +95,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xJ9-uh-m22" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-49.275362318840585" y="761.38392857142856"/>
+            <point key="canvasLocation" x="-38" y="117"/>
         </scene>
     </scenes>
 </document>
