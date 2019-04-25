@@ -15,7 +15,7 @@
 		576A15A722710B3400F43B78 /* PaintingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A15A622710B3400F43B78 /* PaintingTableViewCell.swift */; };
 		576A15A922710C3900F43B78 /* Painting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A15A822710C3900F43B78 /* Painting.swift */; };
 		576A15AD22710C6E00F43B78 /* PaintingTableViewCellDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A15AC22710C6E00F43B78 /* PaintingTableViewCellDelegate.swift */; };
-		576A15AF22710C9300F43B78 /* PaintingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A15AE22710C9300F43B78 /* PaintingModel.swift */; };
+		576A15B12271DDC500F43B78 /* PaintingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 576A15B02271DDC500F43B78 /* PaintingController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +29,7 @@
 		576A15A622710B3400F43B78 /* PaintingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCell.swift; sourceTree = "<group>"; };
 		576A15A822710C3900F43B78 /* Painting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Painting.swift; sourceTree = "<group>"; };
 		576A15AC22710C6E00F43B78 /* PaintingTableViewCellDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingTableViewCellDelegate.swift; sourceTree = "<group>"; };
-		576A15AE22710C9300F43B78 /* PaintingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingModel.swift; sourceTree = "<group>"; };
+		576A15B02271DDC500F43B78 /* PaintingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintingController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +71,7 @@
 				576A15A622710B3400F43B78 /* PaintingTableViewCell.swift */,
 				576A15A822710C3900F43B78 /* Painting.swift */,
 				576A15AC22710C6E00F43B78 /* PaintingTableViewCellDelegate.swift */,
-				576A15AE22710C9300F43B78 /* PaintingModel.swift */,
+				576A15B02271DDC500F43B78 /* PaintingController.swift */,
 			);
 			path = ArtApp;
 			sourceTree = "<group>";
@@ -148,9 +148,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				575B865722710592008F1C21 /* AppDelegate.swift in Sources */,
-				576A15AF22710C9300F43B78 /* PaintingModel.swift in Sources */,
 				576A15A522710AA500F43B78 /* PaintingViewController.swift in Sources */,
 				576A15A722710B3400F43B78 /* PaintingTableViewCell.swift in Sources */,
+				576A15B12271DDC500F43B78 /* PaintingController.swift in Sources */,
 				576A15A922710C3900F43B78 /* Painting.swift in Sources */,
 				576A15AD22710C6E00F43B78 /* PaintingTableViewCellDelegate.swift in Sources */,
 			);
