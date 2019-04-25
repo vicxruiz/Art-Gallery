@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//delegate
 protocol PaintingTableViewCellDelegate: class {
     func tappedLikeButton(on cell: PaintingTableViewCell)
 }

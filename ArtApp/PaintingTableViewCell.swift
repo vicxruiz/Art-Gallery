@@ -10,16 +10,22 @@ import UIKit
 import Foundation
 
 class PaintingTableViewCell: UITableViewCell {
+    
+    //creating the variables and outlets
     @IBOutlet var portraitImage: UIImageView!
     @IBOutlet var button: UIButton!
+    
+    //need delegate for button
     weak var delegate: PaintingTableViewCellDelegate?
     
+    //setting view
     var painting: Painting? {
         didSet {
             updateView()
         }
     }
     
+    //updating view for images
     func updateView() {
         guard let painting = painting else {return}
         portraitImage.image = painting.image
